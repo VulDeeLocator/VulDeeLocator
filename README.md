@@ -1,0 +1,8 @@
+# VulDeeLocator: Leveraging Intermediate Code for Deep Learning-based Vulnerability Detection and Locating
+
+
+We propose Vulnerability Deep learning-based Detector and Locator (VulDeeLocator), which is the first deep learning-based vulnerability detector that can simultaneously achieve a high detection capability and a high locating precision. The innovations underlying VulDeeLocator include (i) the leverage of intermediate code to accommodate extra semantic information than what is conveyed by source code, and (ii) the use of a novel variant of the Bidirectional Recurrent Neural Network we propose.
+
+We extract pieces of source code according to some syntax information (i.e., source code- and Syntax-based Vulnerability Candidate or sSyVC for short), involving four kinds of sSyVCs: library/API function call (FC), array definition (AD), pointer definition (PD), and arithmetic expression (AE). Then we extend these pieces of code to accommodate the semantic information from the intermediate code (i.e., intermediate code- and Semantics-based Vulnerability Candidate or iSeVC for short).
+
+We prepare a dataset of Lower Level Virtual Machine (LLVM) intermediate code from two data sources: the National Vulnerability Database (NVD) and the Software Assurance Reference Dataset (SARD). The resulting dataset contains 148,730 vulnerability candidates in intermediate code (i.e., iSeVC), among which 36,120 are vulnerable and 112,610 are not vulnerable. We provide the dataset for training purpose and testing purpose for each kind of sSyVC respectively. For vulnerable iSeVCs, the line numbers of the vulnerabilities are available. 
