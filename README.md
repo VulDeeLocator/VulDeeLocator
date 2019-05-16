@@ -1,4 +1,4 @@
-# VulDeeLocator: Leveraging Intermediate Code for Deep Learning-based Vulnerability Detection and Locating
+# VulDeeLocator: Deep Learning-based Vulnerability Detection Leveraging Intermediate Code and Granularity Refinement
 
 
 We propose Vulnerability Deep learning-based Detector and Locator (VulDeeLocator), which is the first deep learning-based vulnerability detector that can simultaneously achieve a high detection capability and a high locating precision. The innovations underlying VulDeeLocator include (i) the leverage of intermediate code to accommodate extra semantic information than what is conveyed by source code, and (ii) the use of a novel variant of the Bidirectional Recurrent Neural Network we propose.
