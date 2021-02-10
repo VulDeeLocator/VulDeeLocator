@@ -1,4 +1,4 @@
-## Step 1: Data preprocess##
+## Step 1: Data preprocess
 
 1. process_dataflow.py: Get the corpus of slices generated from the SARD dataset; process_dataflow_NVD.py: get the corpus of slices generated from the NVD dataset. The input is slices generated from the SARD dataset and the NVD dataset and the output is corpus files.
 
