@@ -1,19 +1,13 @@
-Steps:
-1、data_preprocess
+## Step 1: Data preprocess##
 
-（1）process_dataflow.py : get corpus of slices generated from SARD datasets；
-     process_dataflow_NVD.py : get corpus of slices generated from NVD datasets.
-	 The input is slices generated from SARD datasets and NVD datasets. The output is corpus files.
+1. process_dataflow.py: Get the corpus of slices generated from the SARD dataset; process_dataflow_NVD.py: get the corpus of slices generated from the NVD dataset. The input is slices generated from the SARD dataset and the NVD dataset and the output is corpus files.
 
-（2）create_word2vecmodel.py : train the word2vec model；
-	 The input is the corpus files.The output is trained model.
+2. create_word2vecmodel.py: Train the word2vec model. The input is the corpus files and the output is the trained model.
 
-（3）get_dl_input.py : get the vectors of tokens in the corpus files；
-	 The input is the corpus file and trained word2vec model. The output is the vector file.
+3. get_dl_input.py. Get the vectors of tokens in the corpus files. The input is the corpus file and the trained word2vec model and the output is the vector file.
 
-2、train the model
-   
-（1）bgru_threshold.py: train the BGRU model which can locate the vulnerabilities and evaluate it .
-	 The input is the train datasets and test datasets,and the output is the trained BGRU model.
+## Step 2: Model training ##
 
-（2）bgru_raw.py :original BGRU model.
+1. bgru_threshold.py: Train the BGRU model which can locate the vulnerabilities and evaluate it. The input is the training dataset and the test dataset, and the output is the trained BGRU model.
+
+2. bgru_raw.py: Train the original BGRU model.
