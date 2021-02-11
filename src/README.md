@@ -1,6 +1,6 @@
 ## Step 1: Data preprocess
 
-1. process_dataflow.py: Get the corpus of slices generated from the SARD dataset; process_dataflow_NVD.py: get the corpus of slices generated from the NVD dataset. The input is slices generated from the SARD dataset and the NVD dataset and the output is corpus files.
+1. process_dataflow.py: Get the corpus of slices generated from the systhetic and academic dataset; process_dataflow_NVD.py: get the corpus of slices generated from the real-world dataset. The input is slices generated from the systhetic and academic dataset and the real-world dataset and the output is corpus files.
 
 2. create_word2vecmodel.py: Train the word2vec model. The input is the corpus files and the output is the trained model.
 
