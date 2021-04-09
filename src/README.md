@@ -3,6 +3,7 @@
 "xxxxx0.py" or "xxxxx0" is used to deal with patched files,another one is used to deal with vulnerable files.
 
 1. NVD files
+
 (1). allCompilexxx.py或allCompilexxx0.py
 python allCompilexxx.py(或allCompilexxx0.py) xxx.xls ,"xxx" means name of software. This file is used to compile the source code file to get .bc file,and also extract four kinds of focus. source_root is the directory of source code files,diff_root is the directory of diff files,slicer_root is the directory of output files. And also hole_line.txt is output of this step,and then renamed as "xxx-hole_line.txt".
 
@@ -19,6 +20,7 @@ python addFlawtag.py xxx-hole_line.txt, "xxx" means name of software. This file 
 python getSourceLine.py ../../newslice（或newslice0）/, this file is used to the slice2flawline.pkl,which contains the linenum of vullines corresponding to the .slicer.c files.
 
 2.SARD files
+
 (1). getVulLineForCounting.py
 python getVulLineForCounting.py ../../000 ../../xxx.xml, this file is used to get the linenums of vulline in source code file. The input is source code file and xxx.xml file. The output is xxx.txt file, and renamed as SARD-hole_line.txt.
 
