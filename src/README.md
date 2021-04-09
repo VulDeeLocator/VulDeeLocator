@@ -1,6 +1,8 @@
 Environment:
 Source2slice: clang-6.0 + llvm + dg
+
 dg: https://github.com/mchalupa/dg
+
 Data preprocess and Model training: python3.6 + tensorflow1.6 + keras2.1.2 + gensim3.4
 
 ## Step 1: Source2slice ##
