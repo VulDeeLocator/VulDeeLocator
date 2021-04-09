@@ -11,6 +11,7 @@ Data preprocess and Model training: python3.6 + tensorflow1.6 + keras2.1.2 + gen
 1. NVD files
 
  (1). allCompilexxx.py (or allCompilexxx0.py)
+ 
 python allCompilexxx.py (or allCompilexxx0.py) xxx.xls, "xxx" means name of software. This file is used to compile the source code file to get .bc file, and also extract four      kinds of focuses (i.e., sSyVCs). source_root is the directory of source code files, diff_root is the directory of diff files, slicer_root is the directory of output files. hole_line.txt is the  output of this step, which is renamed as "xxx-hole_line.txt".
 
  (2). autoReorder.py
