@@ -56,7 +56,7 @@ This file is used to compile the source code file to .bc file.
 
  (3). get-llvmwithline.cpp
  
-./get-llvmwithline SARD-hole_line.txt. 
+./get-llvmwithline SARD-hole_line.txt 
 
 This file is used to extract four kinds of focuses. The output file is in the directory of "000".
 
@@ -87,9 +87,7 @@ This is the same as NVD files.
 ## Step 2: Data preprocess ##
 
 1. process_dataflow.py: Get the corpus of slices generated from the systhetic and academic dataset. 
-
 process_dataflow_NVD.py: Get the corpus of slices generated from the real-world dataset. 
-
 The input is slices generated from the systhetic and academic dataset and the real-world dataset and the output is corpus files.
 
 2. create_word2vecmodel.py: Train the word2vec model. The input is the corpus files and the output is the trained model.
