@@ -5,7 +5,7 @@
 1. NVD files
 
  (1). allCompilexxx.py或allCompilexxx0.py
-python allCompilexxx.py(或allCompilexxx0.py) xxx.xls ,"xxx" means name of software. This file is used to compile the source code file to get .bc file,and also extract four   kinds of focus. source_root is the directory of source code files,diff_root is the directory of diff files,slicer_root is the directory of output files. And also hole_line.txt is output of this step,and then renamed as "xxx-hole_line.txt".
+python allCompilexxx.py(或allCompilexxx0.py) xxx.xls ,"xxx" means name of software. This file is used to compile the source code file to get .bc file,and also extract four      kinds of focus. source_root is the directory of source code files,diff_root is the directory of diff files,slicer_root is the directory of output files. And also hole_line.txt is output of this step,and then renamed as "xxx-hole_line.txt".
 
  (2). autoReorder.py
 python2 autoReorder.py ../../newslice(或newslice0)/ , "newslice" is the directory of slice files. This file is used to reorder the sentences extracted from source code file. The output is .final.ll file in the directory of newslice,that is llvm slice.
