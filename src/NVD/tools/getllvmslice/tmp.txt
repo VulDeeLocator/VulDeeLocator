@@ -1,5 +1,0 @@
-/home/king/aproffmpeg/newslicerlibav/CVE-2013-0868/libav-10.3/huffyuvdec/huffyuvdec.c 149 
-/home/king/aproffmpeg/newslicerlibav/CVE-2013-0868/libav-10.3/huffyuvdec/huffyuvdec.c 120 
-/home/king/aproffmpeg/newslicerlibav/CVE-2013-0868/libav-10.3/huffyuvdec/huffyuvdec.c 154 
-/home/king/aproffmpeg/newslicerlibav/CVE-2013-0868/libav-10.3/huffyuvdec/huffyuvdec.c 124 
-/home/king/aproffmpeg/newslicerlibav/CVE-2013-0868/libav-10.3/huffyuvdec/huffyuvdec.c 159 
