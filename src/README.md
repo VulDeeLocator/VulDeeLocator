@@ -18,25 +18,25 @@ This file is used to compile the source code file to get .bc file, and also extr
 
  (2). autoReorder.py
  
-python2 autoReorder.py ../../newslice (or newslice0)/, "newslice" is the directory of slice files. 
+> python2 autoReorder.py ../../newslice (or newslice0)/, "newslice" is the directory of slice files. 
 
 This file is used to reorder the statements extracted from the source code file. The output is .final.ll file in the directory of newslice, which is an llvm slice.
 
  (3). getFlawLoc.py
  
-python2 getFlawLoc.py ../../newslice (or newslice0)/, "newslice" is the directory of slice files. 
+> python2 getFlawLoc.py ../../newslice (or newslice0)/, "newslice" is the directory of slice files. 
 
 This file is used to get slice2flawline.pkl, which contains the line number of vulnerale lines.
 
  (4). addFlawtag.py
  
-python addFlawtag.py xxx-hole_line.txt, "xxx" means name of software. 
+> python addFlawtag.py xxx-hole_line.txt, "xxx" means name of software. 
 
 This file is used to get the source code slices (.slicer.c) corresponding to the llvm slices in the directory of newslice.
 
  (5). getSourceLine.py
  
-python getSourceLine.py ../../newslice（or newslice0）/ 
+> python getSourceLine.py ../../newslice（or newslice0）/ 
 
 This file is used to the slice2flawline.pkl, which contains the line number of vulnerable lines corresponding to the .slicer.c files.
 
@@ -44,43 +44,43 @@ This file is used to the slice2flawline.pkl, which contains the line number of v
 
  (1). getVulLineForCounting.py
  
-python getVulLineForCounting.py ../../000 ../../xxx.xml 
+> python getVulLineForCounting.py ../../000 ../../xxx.xml 
 
 This file is used to get the line numbers of vulnerable lines in the source code file. The input is the source code file and xxx.xml file. The output is xxx.txt file, which is renamed as SARD-hole_line.txt.
 
  (2). multiFileCompile.py
  
-python multiFileCompile.py ../../000/ ../../xxx.xml 
+> python multiFileCompile.py ../../000/ ../../xxx.xml 
 
 This file is used to compile the source code file to .bc file.
 
  (3). get-llvmwithline.cpp
  
-./get-llvmwithline SARD-hole_line.txt 
+> ./get-llvmwithline SARD-hole_line.txt 
 
 This file is used to extract four kinds of focuses. The output file is in the directory of "000".
 
  (4). autoReorder.py
  
-python2 autoRecorder.py ../../000/ 
+> python2 autoRecorder.py ../../000/ 
 
 This is the same as NVD files.
 
  (5). getFlawLoc.py
  
-python2 getFlawLoc.py ../../000/
+> python2 getFlawLoc.py ../../000/
 
 This is the same as NVD files.
 
  (6). addFlawtag.py
  
-python addFlawtag.py SARD-hole_line.txt
+> python addFlawtag.py SARD-hole_line.txt
 
 This is the same as NVD files. 
 
  (7). getSourceLine.py
  
-python getSourceLine.py ../../000/
+> python getSourceLine.py ../../000/
 
 This is the same as NVD files.
 
