@@ -1,14 +1,14 @@
-Environment:
+## Environment
 
 Source2slice: clang-6.0 + llvm + dg (dg: https://github.com/mchalupa/dg)
 
 Data preprocess and Model training: python3.6 + tensorflow1.6 + keras2.1.2 + gensim3.4
 
-## Step 1: Source2slice ##
+## Step 1: Source2slice
 
 "xxxxx0.py" or "xxxxx0" is used to deal with patched files, another one is used to deal with vulnerable files.
 
-1. NVD files
+### 1. NVD files
 
  (1). allCompilexxx.py (or allCompilexxx0.py)
  
@@ -40,7 +40,7 @@ python getSourceLine.py ../../newslice（or newslice0）/
 
 This file is used to the slice2flawline.pkl, which contains the line number of vulnerable lines corresponding to the .slicer.c files.
 
-2. SARD files
+### 2. SARD files
 
  (1). getVulLineForCounting.py
  
