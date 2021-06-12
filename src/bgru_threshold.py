@@ -239,16 +239,16 @@ def main(traindataSet_path, testdataSet_path, weightpath, resultpath, batch_size
             if y_pred == 0 and labels[index] == 0:
                 TN += 1
                 TN_l += 1
-                with open("BGRU/result_analyze/TN/"+str(index)+".pkl","wb") as f:
+                with open("result_analyze/TN/"+str(index)+".pkl","wb") as f:
                     pickle.dump(list([layer_output[0][j]]),f)
-                with open("BGRU/result_analyze/TN_testcase_id.txt",'a+') as ftn:
+                with open("result_analyze/TN_testcase_id.txt",'a+') as ftn:
                     ftn.write(testcase[index]+'\n')
             if y_pred == 0 and labels[index] == 1:
                 FN += 1
                 FN_l += 1
-                with open("BGRU/result_analyze/FN/"+str(index)+".pkl","wb") as f:
+                with open("result_analyze/FN/"+str(index)+".pkl","wb") as f:
                     pickle.dump(list([layer_output[0][j]]),f)
-                with open("BGRU/result_analyze/FN_testcase_id.txt",'a+') as ffn:
+                with open("result_analyze/FN_testcase_id.txt",'a+') as ffn:
                     ffn.write(testcase[index]+'\n')
 					
             if y_pred == 1 and labels[index] == 0:
@@ -261,9 +261,9 @@ def main(traindataSet_path, testdataSet_path, weightpath, resultpath, batch_size
                         dict_testcase2func[testcase[index].split("/")[0]][func].append("FP")
                     else:
                         dict_testcase2func[testcase[index].split("/")[0]][func] = ["FP"]
-                with open("BGRU/result_analyze/FP/"+str(index)+".pkl","wb") as f:
+                with open("result_analyze/FP/"+str(index)+".pkl","wb") as f:
                     pickle.dump(list([layer_output[0][j]]),f)
-                with open("BGRU/result_analyze/FP_testcase_id.txt",'a+') as ffp:
+                with open("result_analyze/FP_testcase_id.txt",'a+') as ffp:
                     ffp.write(testcase[index]+'\n')					
                     
             if y_pred == 1 and labels[index] == 1:
@@ -285,9 +285,9 @@ def main(traindataSet_path, testdataSet_path, weightpath, resultpath, batch_size
                         dict_testcase2func[testcase[index].split("/")[0]][func].append("TP")
                     else:
                         dict_testcase2func[testcase[index].split("/")[0]][func] = ["TP"]
-                with open("BGRU/result_analyze/TP/"+str(index)+".pkl","wb") as f:
+                with open("result_analyze/TP/"+str(index)+".pkl","wb") as f:
                     pickle.dump(list([layer_output[0][j]]),f)
-                with open("BGRU/result_analyze/TP_testcase_id.txt",'a+') as ftp:
+                with open("result_analyze/TP_testcase_id.txt",'a+') as ftp:
                     ftp.write(testcase[index]+'\n')
          
             results[testcase[index]] = result
@@ -430,9 +430,9 @@ if __name__ == "__main__":
     dropout = 0.4  
     traindataSetPath = "./data/dl_input/train/"  
     testdataSetPath = "./data/dl_input/test/"
-    #realtestdataSetPath = "../data_preprocess/data/realdata/aftercut/"  
+    #realtestdataSetPath = "./data/dl_input/realdata/"  
     weightPath = 'model/bgru_0.4_k=1.h5'  
-    resultPath = "./BGRU/result/bgru_0.4_k=1.2" 
+    resultPath = "result/bgru_0.4_k=1.2" 
     #dealrawdata(raw_traindataSetPath, raw_testdataSetPath, traindataSetPath, testdataSetPath, batchSize, maxLen, vectorDim)
     main(traindataSetPath, testdataSetPath, weightPath, resultPath, batchSize, maxLen, vectorDim, dropout=dropout)
     #testrealdata(realtestdataSetPath, weightPath, batchSize, maxLen, vectorDim, dropout)
