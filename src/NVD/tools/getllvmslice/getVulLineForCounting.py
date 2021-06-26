@@ -57,7 +57,6 @@ def autoGetVulLine(rawPath,fileName):
 
 
 if __name__ == '__main__':
-    #若需要输入路径，请输入绝对路径
     parser = OptionParser()
     (options, args) = parser.parse_args()
     if len(args) != 2:
