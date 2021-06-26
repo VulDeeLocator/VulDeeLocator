@@ -11,16 +11,6 @@ import os
 import gc
 import os
 
-os.environ['PYTHONHASHSEED'] = "2018"
-
-testcases = []
-f = open("record/testcases_train2.pkl",'rb')
-testcases += pickle.load(f)
-f.close()
-f = open("record/testcases_test2.pkl",'rb')
-testcases += pickle.load(f)
-f.close()
-
 
 '''
 DirofCorpus class
